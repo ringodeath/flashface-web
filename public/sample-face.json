@@ -1,0 +1,9 @@
+{
+  "head": { "category": "head", "variantIndex": 6, "x": 300, "y": 250, "scaleX": 1.0, "scaleY": 1.0, "opacity": 1 },
+  "hair": { "category": "hair", "variantIndex": 2, "x": 300, "y": 130, "scaleX": 1.0, "scaleY": 1.0, "opacity": 1 },
+  "eyebrows": { "category": "eyebrows", "variantIndex": 3, "x": 300, "y": 200, "scaleX": 1.0, "scaleY": 1.0, "opacity": 1 },
+  "eyes": { "category": "eyes", "variantIndex": 3, "x": 300, "y": 220, "scaleX": 1.0, "scaleY": 1.0, "opacity": 1 },
+  "nose": { "category": "nose", "variantIndex": 4, "x": 300, "y": 270, "scaleX": 1.0, "scaleY": 1.0, "opacity": 1 },
+  "mouth": { "category": "mouth", "variantIndex": 5, "x": 300, "y": 320, "scaleX": 1.0, "scaleY": 1.0, "opacity": 1 },
+  "jaw": { "category": "jaw", "variantIndex": 3, "x": 300, "y": 340, "scaleX": 1.0, "scaleY": 1.0, "opacity": 1 }
+}

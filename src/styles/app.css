@@ -1,0 +1,537 @@
+/* FlashFace Web — Dark monochrome theme */
+/* 98.css is loaded via <link> in index.html; do NOT @import it here. */
+
+/* ===== Reset & Base ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+/* ===== Global 98.css dark overrides ===== */
+
+.main-window button {
+  background: #1a1a1a !important;
+  color: #eee !important;
+  border-color: #333 !important;
+}
+
+.main-window button:active {
+  background: #2a2a2a !important;
+}
+
+.main-window button:disabled {
+  color: #555 !important;
+  background: #111 !important;
+}
+
+.main-window fieldset {
+  border-color: #2a2a2a !important;
+  background: #111;
+}
+
+.main-window legend {
+  color: #fff !important;
+  background: #111 !important;
+  padding: 0 4px !important;
+}
+
+.main-window input[type="range"] {
+  background: #1a1a1a;
+}
+
+/* ===== Desktop ===== */
+
+.desktop {
+  background: #050505;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* ===== Main Window ===== */
+
+.main-window {
+  width: 1178px;
+  max-width: 100%;
+  height: 883px;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #151515;
+}
+
+.main-window > .window-body {
+  flex: 1;
+  overflow: hidden;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  background: #0d0d0d;
+}
+
+/* ===== Title Bar — dark monochrome ===== */
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #080808, #1a1a1a) !important;
+}
+
+.title-bar-text {
+  color: #ddd !important;
+}
+
+.title-bar-controls {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.title-bar-controls button {
+  min-width: 21px;
+  min-height: 21px;
+  font-size: 10px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== 3-Column Layout ===== */
+
+.app-layout {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  min-height: 0;
+}
+
+.left-panel {
+  width: 180px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+
+.center-panel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.right-panel {
+  width: 160px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+
+/* ===== Panel Sections (fieldsets) ===== */
+
+.panel-section {
+  padding: 6px;
+  margin: 0;
+  background: #111 !important;
+  border-color: #2a2a2a !important;
+  color: #eee;
+}
+
+.panel-section legend {
+  font-weight: bold;
+  color: #fff !important;
+  background: #111 !important;
+  padding: 0 4px !important;
+}
+
+.variants-section legend {
+  color: #fff !important;
+  background: #111 !important;
+  padding: 0 4px !important;
+}
+
+/* ===== Canvas Section ===== */
+
+.canvas-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.canvas-section .konva-container,
+.canvas-section canvas {
+  display: block;
+}
+
+/* ===== Variants Section ===== */
+
+.variants-section {
+  min-height: 80px;
+  min-width: 0;
+  padding: 4px 6px !important;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #111;
+  border-color: #2a2a2a;
+}
+
+.variant-strip-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.variant-strip-row .variant-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
+  gap: 2px;
+  align-items: center;
+  min-width: 0;
+}
+
+.variant-strip-row .variant-nav {
+  flex-shrink: 0;
+  min-width: 24px;
+  height: 54px;
+  padding: 0 2px;
+  font-size: 14px;
+}
+
+.variant-strip-row button.variant-thumb-btn {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  padding: 1px;
+  cursor: pointer;
+  background: #ddd !important;
+  border: 1px solid #333 !important;
+}
+
+.variant-strip-row button.variant-thumb-btn.active {
+  border: 2px solid #fff !important;
+  box-shadow: inset 1px 1px 3px #000;
+  background: #bbb !important;
+}
+
+.variant-strip-row button.variant-thumb-btn img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ===== Category Buttons ===== */
+
+.category-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.category-selector button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 3px 6px;
+  text-align: left;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.category-selector button.active {
+  border-style: inset;
+  background: #333 !important;
+  color: #fff !important;
+}
+
+.category-selector button img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* ===== Action Buttons ===== */
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.action-buttons button {
+  width: 100%;
+  padding: 4px 6px;
+  font-size: 11px;
+}
+
+/* ===== Feature Options Panel ===== */
+
+.feature-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feature-options label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 11px;
+  color: #eee;
+}
+
+.feature-options input[type="range"] {
+  flex: 1;
+  min-width: 0;
+}
+
+.feature-options .button-row {
+  display: flex;
+  gap: 4px;
+}
+
+.feature-options .button-row button {
+  flex: 1;
+  padding: 2px 4px;
+  font-size: 11px;
+}
+
+/* ===== Filter Panel ===== */
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  padding: 4px;
+}
+
+.filter-btn {
+  padding: 3px 4px !important;
+  font-size: 10px !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #333 !important;
+  color: #fff !important;
+  border-style: inset !important;
+}
+
+.filter-clear {
+  grid-column: 1 / -1;
+  margin-top: 2px;
+}
+
+.filter-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #2a2a2a;
+}
+
+.filter-slider-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.filter-slider-row label {
+  font-size: 10px;
+  color: #eee;
+}
+
+.filter-slider-row input[type="range"] {
+  width: 100%;
+}
+
+/* ===== Item Scaler Pad ===== */
+
+.scaler-pad {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 2px inset #b0b0b0;
+  background: #fff;
+  position: relative;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.scaler-pad .scaler-knob {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border: 1px solid #000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.scaler-pad .scaler-crosshair-x,
+.scaler-pad .scaler-crosshair-y {
+  position: absolute;
+  background: #999;
+  pointer-events: none;
+}
+
+.scaler-pad .scaler-crosshair-x {
+  left: 0;
+  right: 0;
+  height: 1px;
+  top: 50%;
+}
+
+.scaler-pad .scaler-crosshair-y {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  left: 50%;
+}
+
+/* ===== Feature Preview ===== */
+
+.feature-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  background: #0a0a0a;
+  border: 2px inset #2a2a2a;
+}
+
+.feature-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ===== Confirm Dialog ===== */
+
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirm-dialog {
+  min-width: 280px;
+}
+
+.confirm-dialog .title-bar {
+  background: linear-gradient(to right, #080808, #1a1a1a) !important;
+}
+
+.confirm-dialog .window-body {
+  padding: 12px;
+  background: #111;
+  color: #eee;
+}
+
+.confirm-dialog .dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.confirm-dialog .dialog-buttons button {
+  min-width: 70px;
+  padding: 4px 12px;
+}
+
+/* ===== Scrollbar Styling ===== */
+
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar,
+.variant-scroll::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.left-panel::-webkit-scrollbar-track,
+.right-panel::-webkit-scrollbar-track,
+.variant-scroll::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+.left-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb,
+.variant-scroll::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border: 1px solid #333;
+}
+
+/* ===== Print Styles ===== */
+
+@media print {
+  body,
+  .desktop {
+    background: #fff !important;
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  .main-window {
+    width: auto !important;
+    height: auto !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .title-bar,
+  .left-panel,
+  .right-panel,
+  .variants-section,
+  .confirm-overlay {
+    display: none !important;
+  }
+
+  .window-body,
+  .app-layout,
+  .center-panel,
+  .canvas-section {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+}
